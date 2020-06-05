@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+
+body{
+     font-size: 62.5%;
+     background-color: #f8f8f8;
+     font-family: helvetica;
+}
+
+.afrekenen{
+     display: none;
+     background-color: #fff;
+     z-index: 10;
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+         
+}
+.afrekenen__box{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 550px;
+     height: 450px;
+     background-color: rgb(238, 238, 238);
+     display: flex;
+     flex-direction: column;
+}
+.afrekenen__item{
+     height: 100px;
+     border-top: lightgrey 1px solid;
+     border-bottom: lightgrey 1px solid;
+     
+}
+
+/*Hero*/
+.hero{
+     
+     height: 85vh;
+     width: 100%;
+     margin-bottom: 4rem;
+     transition: all .4s  ease-out;
+     position: relative;
+}
+.bg-1{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url(../img/bread0.jpg)  no-repeat;
+     background-size: cover;
+     
+     transition: all .3s;
+   
+}
+.bg-2{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url(../img/bread1.jpg)  no-repeat;
+     background-size: cover;
+     transition: all .3s;
+     visibility: hidden;
+}
+.hero__box{
+     padding: 0.8rem;
+     text-align: center;
+     border: 1px solid #000;
+     width: 15rem;
+     height: 7rem;
+     position: absolute;
+     top: 2rem;
+     left: 2rem;
+     background-color: #fff;
+}
+.charm{
+     font-family: 'Courgette', sans-serif;
+     font-size: 2rem;
+     font-weight: bold;
+     letter-spacing: 2px;
+     
+}
+.bold{
+     font-size: 1.6rem;
+     font-weight: bold;
+}
+
+.nav ul{
+     display: flex;
+     justify-content: flex-end;
+     padding: 2rem;
+}
+.nav li{
+     list-style: none;
+     margin-left: 5px;
+}
+a{
+     text-decoration: none;
+     color:rgb(49, 49, 49);
+     font-size: 1.5rem;
+     transition: all 0.2s ease-out;
+
+
+}
+a:hover{
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+  
+}
+
+
+/*Welkom*/
+#welkom{
+     padding: 100px 0;
+     margin: 3rem auto;
+     text-align: center;
+     font-size: 1.3rem;
+     width: 90%;
+    
+}
+#welkom p{
+     margin: 2rem 0;
+     text-align: center;
+     font-size: 1.5rem;
+     
+}
+.titel{
+     font-size: 2.5rem;
+     font-family: 'Courgette', sans-serif;
+     font-weight: bold;
+     color: rgb(184, 64, 96);
+     letter-spacing: 3px;
+     text-align: center;
+
+
+}
+.vacatures{
+     color: rgb(184, 64, 96);
+     font-weight: bold;
+}
+
+/*CATEGORIEN*/
+#categorie{
+     padding: 100px 0;
+}
+.categorie__grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-column-gap: 1rem ;
+     grid-row-gap: 1rem;
+     margin-top: 3rem;
+     margin-bottom: 5rem;
+}
+.categorie__grid-box{
+     height: 18rem;
+     border: 1px solid black;
+     background-color: #fff;
+     position: relative;
+}
+.layer{
+display: none;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(255, 255, 255, 0.699);
+width: 100%;
+height: 100%;
+}
+.categorie__grid-box:hover .layer{
+     display: block;
+
+}
+.categorie__titel{
+     margin: 1rem;
+     font-size: 2rem;
+}
+.categorie__alle{
+     color: rgb(184, 64, 96);
+     font-family: serif;
+     margin: 1rem;
+     font-size: 1.5rem;
+}
+.categorie__grid-box--brood{
+     background: url(../img/brood.png) center center no-repeat;
+     background-size: cover;
+}
+.categorie__grid-box--kleinbrood{
+     background: url(../img/tijger-bol.jpg) center center no-repeat;
+     background-size: cover;
+}
+.categorie__grid-box--snacks{
+     background: url(../img/saucijzen.jpg) center center no-repeat;
+     background-size: cover;
+}
+.categorie__grid-box--gebak{
+     background: url(../img/gebak.png) center center no-repeat;
+     background-size: cover;
+}
+.categorie__grid-box--taart{
+     background: url(../img/taart.jpg) center center no-repeat;
+     background-size: cover;
+}
+.categorie__grid-box--thema{
+     background: url(../img/bruiloft.webp) center center no-repeat;
+     background-size: cover;
+}
+
+
+/*Aanbevolen*/
+.aanbevolen__grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-column-gap: 1rem ;
+     grid-row-gap: 1rem;
+     margin: 3rem 1rem 0 1rem;
+     
+
+}
+.aanbevolen__box{
+     height: 15rem;
+     border: 1px solid black;
+     background-color: #fff;
+     display: grid;
+     grid-template-columns:  40% 50%;
+     padding: 5px;
+
+}
+.aanbevolen__box--foto1{
+     background: url(../img/kuipje.jpeg) center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box--foto2{
+     background: url(../img/keienbrood.jpeg)center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box--foto3{
+     background: url(../img/volkorenbrood.jpeg)center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box--foto4{
+     background: url(../img/suikerbrood.jpeg)center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box--foto5{
+     background: url(../img/croissant.png)center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box--foto6{
+     background: url(../img/punt.jpeg)center center no-repeat;
+     background-size: cover;
+}
+.aanbevolen__box-text{
+     padding: 5px;
+     position: relative;
+}
+.aanbevolen__box-text .h3{
+     font-size: 2rem;
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+
+}
+.aanbevolen__box-text p{
+     font-size: 1rem;
+     color: rgb(48, 48, 48);
+     letter-spacing: 1px;
+}
+.prijs{
+     font-family: serif;
+     position: absolute;
+     bottom: 1rem;
+     right: 1rem;
+     color: rgb(184, 64, 96);
+     font-size: 1.6rem;
+
+}
+/*FOOTER*/
+#footer{
+     height: 40rem;
+     margin-top: 10rem;
+     background: url(../img/footer.jpg);
+     border-top: 5px solid black;
+    
+}
+.footer-info{
+     display: flex;
+     justify-content: space-around;
+     margin-top: 8rem;
+}
+.footer-info h3{
+     color: #fff;
+     font-size: 3rem;
+     font-family:'Courgette';
+     text-align: center;
+     margin-bottom: 1rem;
+
+}
+.footer-info ul{
+     text-align: center;
+     
+}
+.footer-info ul li{
+     list-style: none;
+     color: rgb(179, 176, 176);
+     font-size: 1.6rem;
+     margin: 5px 0;
+}
+.footer-info ul li:hover{
+     color:#fff;
+     transition: .2s ease-in;
+}
+.wrapper{
+     display: flex;
+     justify-content: center;
+}
+.hero--box--2{
+     padding: 0.8rem;
+     text-align: center;
+     border: 1px solid #000;
+     width: 14rem;
+     height: 6rem;
+     background-color: #fff;
+     display: block;
+     margin-top: -3.5rem;
+}
+
+#email{
+     width: 100%;
+     border:none;
+     background-color: rgba(255, 255, 255, 0.712);
+     text-align: center;
+     font-size: 1.5rem;
+     padding: 4px   ;
+}
+button{
+     width: 100%;
+     margin: 0 auto;
+     text-align: center;
+     padding: 1rem 0.5rem;
+     margin-top: 1rem;
+     border: none;
+     background-color: rgba(172, 129, 89, 0.705);
+     color: #fff;
+     font-size: 1.4rem;
+}
+/*Niews*/
+#niews{
+     margin-top: 5rem;
+}
+.niews__wrapper{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 1rem;
+     margin: 2rem 1rem;
+
+
+}
+.card{
+     height: 35rem;
+     background-color: #fff;
+}
+
+.card__lunch-img{
+     background: url(../img/lunchen.jpg)no-repeat center center;
+     background-size: cover;
+     height: 20rem;
+}
+.card__actie-img{
+     height: 20rem;
+     background: url(../img/kleinebroojdes.jpeg) no-repeat center center;
+     background-size: cover;
+}
+.card__niews-titel{
+     font-size: calc(12px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+     color: #b84060;
+     padding: 20px;
+}
+.card__niews-text{
+     color:#696869;
+     line-height: 26px;
+     font-size: 16px;
+     padding: 20px;
+}
+@media (max-width:1100px){
+     .categorie__grid{
+          grid-template-columns: 1fr 1fr;
+     }
+     .aanbevolen__grid{
+          grid-template-columns: 1fr;
+     }
+     .niews__wrapper{
+          grid-template-columns: 1fr;
+     }
+}
+@media(max-width: 600px){
+     .categorie__grid{
+          grid-template-columns: 1fr;
+     }
+     .informatie{
+          display: none;
+     }
+     .mijnaccount{
+          display:none
+     }
+     .nav{
+          display: none;
+     }
+}
